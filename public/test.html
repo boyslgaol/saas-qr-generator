@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Form</title>
+</head>
+<body>
+    <h1>Test Form Submit ke Laravel</h1>
+    
+    <form action="/order" method="POST">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf_token">
+        <input type="text" name="customer_name" placeholder="Nama" value="Test User">
+        <input type="email" name="customer_email" placeholder="Email" value="test@test.com">
+        <input type="url" name="target_url" placeholder="URL" value="https://google.com">
+        <select name="qr_type">
+            <option value="static">Static</option>
+            <option value="dynamic">Dynamic</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        // Ambil CSRF token dari meta tag
+        fetch('/csrf-token')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('csrf_token').value = data.token;
+            });
+    </script>
+</body>
+</html>
