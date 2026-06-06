@@ -36,9 +36,6 @@ A sytem create QR Code premium with color and custom logo
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/barbershop-pos.git
-<<<<<<< HEAD
-cd barbershop-pos
-=======
-cd barbershop-pos
->>>>>>> 0a6d8f5 (Add project screenshots)
+git clone https://github.com/boyslgaol/saas-qr-generator.git
+cd saas-qr-generator
+
